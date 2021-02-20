@@ -1,42 +1,32 @@
-#include<iostream>
-#include<iomanip>
-
-using namespace std;
-
+#include <stdio.h>
 int main()
 {
-    float n1, n2, n3, n4, n = 6.4, avg;
-
-    cin>>n1>>n2>>n3>>n4;
-
-    avg = (n1+n2+n3+n4)/4;
-
-    cout<<setprecision(1)<<fixed <<"Media: "<<avg<<endl;
-
-    if(avg >= 7.0)
+    double first, second, third, fourth, last, sum;
+    scanf("%lf %lf %lf %lf", &first, &second, &third, &fourth);
+    sum = (first * 2 + second * 3 + third * 4 + fourth) / 10;
+    printf("Media: %.1f\n", sum);
+    if (sum >= 7.0)
     {
-        cout<<"Aluno aprovado."<<endl;
+        printf("Aluno aprovado.\n");
     }
-    else if(avg >= 5.0)
+    else if (sum >= 5.0)
     {
-        cout<<"Aluno em exame."<<endl;
-
-        cout<<"Nota do exame: "<<setprecision(1)<<fixed<<n<<endl;
-
-        if((n+avg)/2 > 5.0)
+        printf("Aluno em exame.\n");
+        scanf("%lf", &last);
+        printf("Nota do exame: %.1f\n", last);
+        if (last + sum / 2.0 > 5.0)
         {
-            cout<<"Aluno aprovado."<<endl;
+            printf("Aluno aprovado.\n");
         }
         else
         {
-            cout<<"Aluno reprovado."<<endl;
+            printf("Aluno reprovado.\n");
         }
-
-        cout<<"Media final: "<<setprecision(1)<<fixed<<(n + avg)/2<<endl;
+        printf("Media final: %.1f\n", (last + sum) / 2.0);
     }
     else
     {
-        cout<<endl;
+        printf("Aluno reprovado.\n");
     }
-return 0;
+    return 0;
 }
